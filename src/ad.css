@@ -1,0 +1,47 @@
+#ad-para {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ad-para2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+#att-container {
+    border: 0px solid black;
+    background-color: lightgrey;
+    width: 900px;
+    overflow-x: hidden;
+}
+
+.input-data {
+    height: 45px;
+    margin-top: -10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#post-footer {
+    border: 1px solid rgba(11, 91, 105, 0.979);
+    background-color: rgba(11, 91, 105, 0.979);
+    height: 50px;
+}
+
+#post-label {
+    color: ivory;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 420px) {
+    #att-container {
+        width: 90%;
+    }
+    #post-label {
+        text-align: center;
+    }
+}
