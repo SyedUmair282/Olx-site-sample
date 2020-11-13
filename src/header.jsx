@@ -40,6 +40,7 @@ class Header extends React.Component{
         })
     }
     
+    
     render(){
         
         return(
@@ -83,7 +84,7 @@ class Header extends React.Component{
                             <li><button type="button" className="menu">Motor Cycles</button></li>
                             <li><button type="button" className="menu">Laptops</button></li>
                         </ul>
-                        <img style={{marginTop:'-15px',width:'100%'}} src={Menu} alt="" id="img2"/>
+                        <img style={{marginTop:'-10px',width:'100%'}} src={Menu} alt="" id="img2"/>
                     </div>
                 </div>
                 <br/>
@@ -92,14 +93,16 @@ class Header extends React.Component{
                 <h3>FRESH RECOMMENDATIONS</h3>
                     <div className="row">
                     {this.state.ad.map((v,i)=>{
-                        return <div className="card" key={i} id="link">
+                        return <Link to={{pathname:'/ad_details',price:v.price,description:v.description,locate:v.locate,file:v.file}} key={i} id="link">
+                        <div className="card">
                         <img className="card-img-top" src={v.file} alt="Card image cap" style={{height:"140px",width:"238px"}}/>
                         <div className="card-body" id="link1">
                         <h3 className="card-title">Rs:{v.price}</h3>
                         <p className="card-text">{v.description}</p>
                         <h4>{v.locate}</h4>
                         </div>
-                        </div>   
+                        </div>
+                        </Link>
                     })}
                     </div>
                 </div>
